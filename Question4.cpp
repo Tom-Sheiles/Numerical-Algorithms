@@ -11,7 +11,7 @@ double f(double t)
     return (g * m) / c * (1 - exp( -(c/m) * t ));
 }
 
-double trapizodRule(double a, double b, int n)
+double trapizoidRule(double a, double b, int n)
 {
     double result;
     double step = (b - a) / n;
@@ -25,7 +25,7 @@ double trapizodRule(double a, double b, int n)
     return result;
 }
 
-double rhomberg(double values[n][n], int i, int j)
+double romberg(double values[n][n], int i, int j)
 {
     return (pow(4, (i - 1)) * values[j + 1][i - 1]) / (pow(4,(i - 1)) - 1);
 }
@@ -54,7 +54,7 @@ int main()
     {
         for(int j = 1; j < n - i + 1; j++)
         {
-            values[j][i] = rhomberg(values, i, j);
+            values[j][i] = romberg(values, i, j);
         }
     }
 
