@@ -42,8 +42,7 @@ int main()
         for(int j = 1; j < 8 - i; j++)
         {
             x = i; y = j;
-        }
-        
+        }       
     }
 
     cout << "The total depth of the river is " << answers[x][y] << "m" << endl;

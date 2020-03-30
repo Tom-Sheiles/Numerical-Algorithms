@@ -63,10 +63,8 @@ int main()
     {
         for(int j = 1; j < n - i; j++)
         {
-            //cout << i << " " << j << " " << values[i][j] << " ";
             x = i; y = j;
         }
-        //cout << endl;
     }
 
     double error = abs(values[x][y] - actual)/actual * 100;
