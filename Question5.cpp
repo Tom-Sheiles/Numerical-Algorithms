@@ -33,7 +33,7 @@ int main()
         i++;
         y1 = y;
     }*/
-
+    
     // RK4 Method
     double k1, k2, k3, k4;
     for(;x <= max; x += step)
@@ -83,5 +83,5 @@ int main()
     }
 
     cout << "The speed of the object is " << answers[x2][y2] << "m/s" << endl;
-    cout << "It would take " << (1/answers[x2][y2]) * 1000 << " for an object to travel 1km" << endl;
+    cout << "It would take " << (1/answers[x2][y2]) * 1000 << " seconds for an object to travel 1km" << endl;
 }
