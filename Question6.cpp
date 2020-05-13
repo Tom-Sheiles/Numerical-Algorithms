@@ -29,12 +29,12 @@ int main()
             speed1 = speed3;
         }
     }while (speed3 - 335 <= 0.00001);
-    
 
     cout << "The rocket reaches the speed of sound (335 m/s) at " << x2 << " seconds.\n";
+    
 
-
-    /* SECANT METHOD
+     //SECANT METHOD
+     /*
     float x0 = 71, x1 = 71.5;
     float answer;
 
@@ -48,8 +48,6 @@ int main()
         speed0 = speed1;
         x1 = answer;
         speed1 = f(x1);
-    }while(answer - 335 <= 0.0001);
-
-    cout << answer;*/
+    }while(answer - 335 <= 0.0001);*/ 
     
 }
