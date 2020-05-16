@@ -8,19 +8,26 @@ float f(float x)
     return -0.1 * x * x * x * x - 0.15 * x * x * x - 0.5 * x * x - 0.15 * x + 1.2;
 }
 
-float df(float x)
-{
-    return -0.4 * x * x * x - 0.45 * x * x - x - 0.15;
-}
 
 int main()
 {
-  double x, h, v, error;
+  double x, h, v, trunc, round;
   x = 0.5;
-  h = 0.25;
+  h = 0.1;
 
+for(; h <= 1; h+=0.1){
   v = (f(x+h) - f(x-h)) / (2 * h);
-  error = fabs(df(x) - v) * 100 / df(x);
+  trunc = (f(x+h) - f(x-h) / (2 * h)) - v;
 
-  cout << v <<  " error: " << error << endl;
+  round = (f(x + (2*h)) - f(x - (2*h))) / (4 * h);
+  round = (round - v) / 3;
+
+}
+
+
+  
+    
+  //error = fabs(df(x) - v) * 100 / df(x);
+
+  
 }
